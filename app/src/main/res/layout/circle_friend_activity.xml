@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.predict.tide.black.tide.wieght.TopActionBar
+        android:id="@+id/topActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:right_second_icon="@drawable/publish_bg"
+        />
+
+
+    <com.jwenfeng.library.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/activity_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.jwenfeng.library.pulltorefresh.PullToRefreshLayout>
+
+</LinearLayout>

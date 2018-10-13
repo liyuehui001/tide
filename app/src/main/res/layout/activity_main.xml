@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.predict.tide.black.tide.wieght.TopActionBar
+        android:id="@+id/topActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:title_title="主界面"
+        app:left_icon="@mipmap/return_back"/>
+    <RelativeLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:src="@mipmap/search"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            />
+        <TextView
+            android:id="@+id/etDate"
+            android:gravity="center|left"
+            android:background="@drawable/edittext_input_normal"
+            android:paddingLeft="50dp"
+            android:hint="请输入日期"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/portOut"
+            android:background="@drawable/btn_orange_selector"
+            android:text="国外港口"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"/>
+        <Button
+            android:id="@+id/portInChina"
+            android:background="@drawable/btn_orange_selector"
+            android:text="国内港口"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/dynamic_chart1"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/rightData"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="真实数据"
+            android:gravity="center"
+            android:background="@drawable/btn_orange_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/localData"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="存储数据"
+            android:gravity="center"
+            android:background="@drawable/btn_orange_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/dataAna"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="计算数据"
+            android:gravity="center"
+            android:background="@drawable/btn_orange_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+</LinearLayout>
