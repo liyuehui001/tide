@@ -56,7 +56,8 @@ public class VolleyManager {
             public void call(Subscriber<? super JSONObject> subscriber) {
 
                 try{
-                    subscriber.onNext(postRequest(subscriber,url,map,headersMap));
+                    JSONObject jsonObject = postRequest(subscriber,url,map,headersMap);
+                    subscriber.onNext(jsonObject);
                 }catch (Exception e){
                     e.printStackTrace();
                 }
